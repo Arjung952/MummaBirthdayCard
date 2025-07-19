@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Mother's Day Mumma Ji!</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 460px;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #e91e63;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      font-size: 2rem;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) }
+      100% { transform: translateY(-120vh) }
+    }
+
+    @keyframes fadeIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>💐 Happy Mother’s Day, Mumma Ji 💖</h1>
+  <p>Thank you for your endless love, warm hugs, and gentle wisdom.</p>
+  <p>You are the heart of our home and the soul of our family.</p>
+  <p>Wishing you a day as beautiful and loving as you are.</p>
+  <p>With all my hugs, kisses, and gratitude – forever Arjun 💗</p>
+</div>
+
+<script>
+  const emojis = ['💐','🌸','🌷','❤️','💖','😘','🤗','🌹','🥰','💕','💞','🌼'];
+  setInterval(() => {
+    const b = document.createElement('div');
+    b.className = 'balloon';
+    b.style.left = `${Math.random() * 100}%`;
+    b.style.color = `hsl(${Math.random() * 360}, 70%, 65%)`;
+    b.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    document.body.appendChild(b);
+    setTimeout(() => b.remove(), 7000);
+  }, 500);
+</script>
+
+</body>
+</html>
